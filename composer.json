@@ -1,0 +1,32 @@
+{
+    "name": "pgoodjohn/domino",
+    "authors": [
+        {
+            "name": "Pietro Bongiovanni",
+            "email": "pietro@fixico.nl"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "classmap": [
+            "app/"
+        ]
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.14",
+        "phpunit/phpunit": "^7.5",
+        "codedungeon/phpunit-result-printer": "^0.26.1",
+        "spatie/phpunit-watcher": "^1.8"
+    },
+    "scripts": {
+        "run": "php domino",
+        "run:to-file": "php domino >> output",
+        "test": "./vendor/bin/phpunit tests/",
+        "test:watch": "./vendor/bin/phpunit-watcher watch",
+        "style:check": "./vendor/bin/php-cs-fixer fix --diff --ansi --dry-run",
+        "style:fix": "./vendor/bin/php-cs-fixer fix --diff --ansi"
+    },
+    "config": {
+        "process-timeout": 0
+    }
+}
